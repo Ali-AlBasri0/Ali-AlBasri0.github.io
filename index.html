@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ali Yusuf Al-Basri | Data Specialist &amp; Information Systems Graduate</title>
+<meta name="description" content="Portfolio of Ali Yusuf Al-Basri, BSc Information Systems student and data specialist. Data cleaning, exploration and visualization with Python, SQL and Power BI.">
+<meta property="og:title" content="Ali Yusuf Al-Basri | Data Specialist">
+<meta property="og:description" content="I combine analytical methods with Python, SQL and Power BI to clean, explore and visualize data for clear, actionable insights.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#F4F0E7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>
+(function () {
+  var t = null;
+  try { t = localStorage.getItem("theme"); } catch (e) {}
+  if (!t) t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  document.documentElement.setAttribute("data-theme", t);
+})();
+</script>
+<style>
+:root {
+  --paper: #F4F0E7;
+  --paper-2: #EBE5D8;
+  --ink: #23262B;
+  --muted: #565A61;
+  --rule: #D3CBBA;
+  --accent: #1F5C57;
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+:root[data-theme="dark"] {
+  --paper: #15171A;
+  --paper-2: #1D2024;
+  --ink: #ECE8DF;
+  --muted: #A9ADB3;
+  --rule: #33363B;
+  --accent: #86C9BF;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font: 400 17px/1.65 var(--sans);
+  transition: background-color .2s ease, color .2s ease;
+}
+a { color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1px; transition: color .15s ease, text-decoration-color .15s ease; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+.wrap { width: min(1120px, 100% - 2.5rem); margin-inline: auto; }
+.skip { position: absolute; left: -9999px; top: 0; background: var(--ink); color: var(--paper); padding: .6rem 1rem; z-index: 20; }
+.skip:focus { left: 1rem; top: 1rem; }
+
+/* Masthead */
+.masthead { position: sticky; top: 0; z-index: 10; background: var(--paper); border-bottom: 1px solid var(--ink); }
+.masthead .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: .8rem; flex-wrap: wrap; }
+.brand { font: 500 1.15rem/1 var(--serif); color: var(--ink); text-decoration: none; }
+nav ul { display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
+nav a { color: var(--ink); text-decoration: none; font-size: .95rem; padding-block: .3rem; border-bottom: 1px solid transparent; }
+nav a:hover { border-bottom-color: var(--accent); color: var(--accent); }
+.toggle {
+  font: 500 .875rem/1 var(--sans); color: var(--ink); background: transparent;
+  border: 1px solid var(--rule); border-radius: 2px; padding: .55rem .8rem; cursor: pointer;
+  transition: background-color .15s ease, border-color .15s ease;
+}
+.toggle:hover { background: var(--paper-2); border-color: var(--ink); }
+
+/* Hero */
+.hero { padding-block: clamp(3.5rem, 9vw, 7.5rem) clamp(3rem, 7vw, 5.5rem); }
+.role { font: 400 .95rem/1.4 var(--mono); color: var(--muted); margin: 0 0 1.5rem; }
+h1 { font: 500 clamp(2.9rem, 9.5vw, 7.5rem)/.98 var(--serif); letter-spacing: -.02em; margin: 0; max-width: 12ch; }
+.hero-foot { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: clamp(2.5rem, 6vw, 4.5rem); padding-top: 1.75rem; border-top: 1px solid var(--ink); }
+.statement { font: italic 400 clamp(1.3rem, 2.4vw, 1.9rem)/1.4 var(--serif); margin: 0; max-width: 34em; }
+.btn {
+  display: inline-block; align-self: start; justify-self: start; color: var(--paper); background: var(--ink);
+  padding: .85rem 1.4rem; text-decoration: none; font-weight: 500; font-size: .95rem; border: 1px solid var(--ink);
+  transition: background-color .15s ease, color .15s ease;
+}
+.btn:hover { background: transparent; color: var(--ink); }
+
+/* Sections */
+section { border-top: 1px solid var(--rule); padding-block: clamp(2.5rem, 6vw, 4.5rem); }
+.section-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+h2 { font: italic 400 1.5rem/1.2 var(--serif); margin: 0; color: var(--muted); }
+.lede { font: 400 clamp(1.25rem, 2.2vw, 1.6rem)/1.55 var(--serif); margin: 0; max-width: 34em; }
+
+/* Credits-style lists */
+.credits { margin: 0; padding: 0; }
+.credits > div { display: flex; align-items: baseline; gap: .75rem; padding-block: .95rem; border-bottom: 1px solid var(--rule); flex-wrap: wrap; }
+.credits > div:first-child { border-top: 1px solid var(--ink); }
+.credits dt { font: 500 1.1rem/1.3 var(--serif); flex: 0 0 auto; }
+.credits .lead { flex: 1 1 1.5rem; min-width: 1rem; border-bottom: 1px dotted var(--muted); transform: translateY(-.3em); }
+.credits dd { margin: 0; font-size: 1rem; text-align: right; flex: 0 1 auto; max-width: 100%; }
+.credits dd.left { text-align: left; }
+
+/* Projects as articles */
+.article { display: grid; grid-template-columns: 1fr; gap: 1.5rem; padding-block: 2.25rem; border-top: 1px solid var(--ink); }
+.article + .article { margin-top: 1rem; }
+.kicker { font: italic 400 1.05rem/1.4 var(--serif); color: var(--accent); margin: 0 0 .6rem; }
+.article h3 { font: 500 clamp(2rem, 4.6vw, 3.4rem)/1.05 var(--serif); letter-spacing: -.015em; margin: 0 0 1.25rem; }
+.article p.body { font: 400 1.2rem/1.7 var(--serif); margin: 0; max-width: 36em; }
+.article p.body::first-letter { float: left; font: 500 4.1rem/.8 var(--serif); padding: .3rem .6rem 0 0; color: var(--accent); }
+.byline { border-top: 1px solid var(--rule); padding-top: 1rem; }
+.byline h4 { font: italic 400 1rem/1.3 var(--serif); color: var(--muted); margin: 0 0 .5rem; }
+.byline ul { list-style: none; margin: 0; padding: 0; font: 400 .95rem/1.9 var(--mono); }
+
+/* Footer */
+footer { border-top: 1px solid var(--ink); padding-block: 1.75rem 2.5rem; color: var(--muted); font-size: .95rem; }
+footer .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+
+@media (min-width: 768px) {
+  .section-grid { grid-template-columns: 200px 1fr; gap: 2.5rem; }
+  .hero-foot { grid-template-columns: 1fr auto; align-items: end; gap: 3rem; }
+  .article { grid-template-columns: 200px 1fr; gap: 2.5rem; }
+  .article .byline { grid-column: 1; grid-row: 1; border-top: 0; padding-top: .4rem; }
+  .article .story { grid-column: 2; grid-row: 1; }
+  .credits dd { max-width: 60%; }
+}
+@media (max-width: 767px) {
+  .masthead { position: static; }
+  nav { order: 3; width: 100%; }
+  nav ul { gap: 1.25rem; }
+  .credits dd { text-align: left; flex-basis: 100%; }
+  .credits .lead { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="#top">Ali Yusuf Al-Basri</a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode">Dark mode</button>
+  </div>
+</header>
+
+<main id="main">
+  <div class="hero" id="top">
+    <div class="wrap">
+      <p class="role">BSc Information Systems Student &amp; Data Specialist</p>
+      <h1>Ali Yusuf Al-Basri</h1>
+      <div class="hero-foot">
+        <p class="statement">I combine analytical methods with modern software tools like Python, SQL, and Power BI to clean, explore, and visualize data for clear actionable insights.</p>
+        <a class="btn" href="#work">View selected work</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="about" aria-labelledby="about-h">
+    <div class="wrap section-grid">
+      <h2 id="about-h">About</h2>
+      <p class="lede">I am a BSc Information Systems student at the University of Bahrain, graduating in 2026. My focus is data mining and data visualization, and applying data techniques to build useful tools and analysis.</p>
+    </div>
+  </section>
+
+  <section id="skills" aria-labelledby="skills-h">
+    <div class="wrap section-grid">
+      <h2 id="skills-h">Skills</h2>
+      <dl class="credits">
+        <div><dt>Languages</dt><span class="lead" aria-hidden="true"></span><dd>Python, SQL</dd></div>
+        <div><dt>Analysis and visualization</dt><span class="lead" aria-hidden="true"></span><dd>Pandas, Power BI</dd></div>
+        <div><dt>Workflow and integration</dt><span class="lead" aria-hidden="true"></span><dd>Git, API integration (Streamlit, OpenRouter, TheMealDB)</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="work" aria-labelledby="work-h">
+    <div class="wrap">
+      <div class="section-grid" style="margin-bottom:2rem">
+        <h2 id="work-h">Selected work</h2>
+        <p class="lede">Two projects, written up as short features.</p>
+      </div>
+
+      <article class="article">
+        <div class="story">
+          <p class="kicker">Application</p>
+          <h3>Recipe Manager</h3>
+          <p class="body">Built an app that parses unorganized culinary datasets into structured meal plans using API integrations and Streamlit, giving users an organized interactive interface for recipe management.</p>
+        </div>
+        <aside class="byline" aria-label="Tools used in Recipe Manager">
+          <h4>Tools used</h4>
+          <ul>
+            <li>Streamlit</li>
+            <li>Python</li>
+            <li>OpenRouter API</li>
+            <li>TheMealDB API</li>
+          </ul>
+        </aside>
+      </article>
+
+      <article class="article">
+        <div class="story">
+          <p class="kicker">Exploratory analysis</p>
+          <h3>Olympics EDA</h3>
+          <p class="body">Conducted an exploratory data analysis project cleaning, aggregating, and visualizing historical Olympic Games data to surface trends across historical events and athlete demographics.</p>
+        </div>
+        <aside class="byline" aria-label="Tools used in Olympics EDA">
+          <h4>Tools used</h4>
+          <ul>
+            <li>Pandas</li>
+            <li>SQL</li>
+            <li>Power BI</li>
+          </ul>
+        </aside>
+      </article>
+    </div>
+  </section>
+
+  <section id="education" aria-labelledby="edu-h">
+    <div class="wrap section-grid">
+      <h2 id="edu-h">Education</h2>
+      <dl class="credits">
+        <div><dt>BSc in Information Systems</dt><span class="lead" aria-hidden="true"></span><dd>University of Bahrain, 2026</dd></div>
+        <div><dt>Key courses</dt><span class="lead" aria-hidden="true"></span><dd>Data Mining, Data Visualization</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="contact" aria-labelledby="contact-h">
+    <div class="wrap section-grid">
+      <h2 id="contact-h">Contact</h2>
+      <dl class="credits">
+        <div><dt>Email</dt><span class="lead" aria-hidden="true"></span><dd><a href="mailto:ali.yusuf.albasri@gmail.com">ali.yusuf.albasri@gmail.com</a></dd></div>
+        <div><dt>LinkedIn</dt><span class="lead" aria-hidden="true"></span><dd><a href="https://www.linkedin.com/in/ali-al-basri" target="_blank" rel="noopener noreferrer">linkedin.com/in/ali-al-basri</a></dd></div>
+        <div><dt>GitHub</dt><span class="lead" aria-hidden="true"></span><dd><a href="https://github.com/Ali-AlBasri0" target="_blank" rel="noopener noreferrer">github.com/Ali-AlBasri0</a></dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Ali Yusuf Al-Basri</span>
+    <span>&copy; <span id="year">2026</span></span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var btn = document.getElementById("theme-toggle");
+  function label() {
+    var dark = root.getAttribute("data-theme") === "dark";
+    btn.textContent = dark ? "Light mode" : "Dark mode";
+    btn.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", dark ? "#15171A" : "#F4F0E7");
+  }
+  btn.addEventListener("click", function () {
+    var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("theme", next); } catch (e) {}
+    label();
+  });
+  label();
+  document.getElementById("year").textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
